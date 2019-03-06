@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Lab2_Kochut" Database="" Version="10.0.0">
+  <Project Name="zadanie1" Path="zadanie1/zadanie1.project" Active="No"/>
+  <Project Name="zadanie2" Path="zadanie2/zadanie2.project" Active="No"/>
+  <Project Name="zadanie3" Path="zadanie3/zadanie3.project" Active="No"/>
+  <Project Name="zadanie4" Path="zadanie4/zadanie4.project" Active="No"/>
+  <Project Name="zadanie5" Path="zadanie5/zadanie5.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="zadanie1" ConfigName="Debug"/>
+      <Project Name="zadanie2" ConfigName="Debug"/>
+      <Project Name="zadanie3" ConfigName="Debug"/>
+      <Project Name="zadanie4" ConfigName="Debug"/>
+      <Project Name="zadanie5" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="zadanie1" ConfigName="Release"/>
+      <Project Name="zadanie2" ConfigName="Release"/>
+      <Project Name="zadanie3" ConfigName="Release"/>
+      <Project Name="zadanie4" ConfigName="Release"/>
+      <Project Name="zadanie5" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
