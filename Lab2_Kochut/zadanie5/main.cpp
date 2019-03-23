@@ -3,23 +3,24 @@
 using namespace std;
 int main()
 {
-	int d;
-	int D;
-	int P[2094000];
-	for (int p=0; p < 2094000; ++p) {
-o:
-		cin >> P[p];
-		if (P[p] == 0) {
-			break;
+	while (true) {
+		int i;
+		int a[i];
+		int p = 0;
+		cin >> a[i];
+		if (a[i] == 0) {
+			return 0;
 		}
-		d =  sqrt (P[p]);
-		D = 1;
-		for (int i = 2; i <= d; ++i) {
+		int d =  sqrt (a[i]);
+		int D = 1;
+		for (int l = 2; l <= d; ++l) {
 			++D;
-			if (P[p] % D == 0) {
-				goto o;
+			if (a[i] % D == 0) {
+				p = p +1;
 			}
 		}
-		cout << "Простое" << endl;
+		if (p == 0) {
+			cout << "Простое" << endl;
+		}
 	}
 }

@@ -12,10 +12,8 @@ int main()
 		D++;
 		if (Z % D == 0) {
 			cout << "Нет" << endl;
-			goto f;
+			return 0;
 		}
 	}
 	cout << "Да" << endl;
-f:
-	;
 }
