@@ -46,15 +46,18 @@ public:
 		ret.value[len] = 0;
 		return ret;
 	};
-	String& operator+( const String & s) {
-			String tmp( *this );
-			len += s.len;
-			delete [] value;
-			value = new char[ len + 1 ];
-			strcpy( value, tmp.value );
-			strcpy( value + tmp.len, s.value );
-		return *this;
-	}
+	friend String operator+(const String& per, const String& vtor) {
+		int i, j = 0;
+		String sum;
+		sum.len = per.len + vtor.len;
+		delete[] sum.value;
+		sum.value = new char[sum.len + 1];
+		for (i = 0; i < per.len; i++)
+			sum.value[i] = per.value[i];
+		for (j = 0; i <= sum.len; i++, j++)
+			sum.value[i] = vtor.value[j];
+		return sum;
+	};
 	~String() {
 		delete[] value;
 		cout << "Деструктор тут\n";
@@ -83,9 +86,10 @@ int main()
 	cout << s2 << endl;
 	cin >> s;
 	s1 = s2;
-	cout << s1 << endl;
+	cout << "s1 = s2: "<< s1 << endl;
+	cout << "s = " << s << endl;
 	String q("Za "), w("chto?"),plak;
 	plak = q + w;
-	cout << plak << endl;
+	cout << "q + w = " << plak << endl;
 	return 0;
 }

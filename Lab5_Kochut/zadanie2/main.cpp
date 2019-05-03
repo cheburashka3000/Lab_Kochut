@@ -12,8 +12,8 @@ void tablica (int sis)
 		cerr << "ERROR\n";
 		return;
 	}
-	for (int i = 1; i <= sis; i++) {
-		for (int j = 1; j <= sis; j++)
+	for (int i = 1; i < sis; i++) {
+		for (int j = 1; j < sis; j++)
 			cout << setw (4) << i*j;
 		cout << endl;
 	}

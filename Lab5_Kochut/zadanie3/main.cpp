@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 int main()
 {
-	float sum = 0;
+	double sum = 0;
 	int kol = 0;
-	ifstream tyt ("/home/user/Documents/z.txt");
-	float chislo;
+	ifstream tyt ("/home/user/Documents/data_v13.txt");
+	double chislo;
 	if (tyt.is_open()) {
 		while (tyt >> chislo) {
 			sum += chislo;
@@ -16,7 +17,7 @@ int main()
 		cout << "ERROR\n";
 		return 0;
 	}
-	cout << sum/kol << endl;
+	cout << setprecision(10) << sum/kol << endl;
 	tyt.close();
 	return 0;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 class String
 {
@@ -30,8 +31,17 @@ public:
 	friend ostream& operator<<(ostream& outputStream, const String & s) {
 		return outputStream << s.value;
 	};
-	friend istream& operator>>(istream& in, const String & s) {
-		return in >> s.value;
+	friend istream& operator>>(istream& inputStream, String & s) {
+		char tmp[80];
+		for (int i=0; s.value[i] != 0; i++)
+			tmp[i] = s.value[i];
+		delete[] s.value;
+		s.len = strlen(tmp);
+		s.value = new char [s.len + 1];
+		for (int i=0; i<s.len; i++)
+			s.value[i] = tmp[i];
+		s.value[s.len] = 0;
+		return inputStream >> s.value;
 	};
 };
 

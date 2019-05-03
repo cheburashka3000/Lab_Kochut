@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-	ifstream iz("/home/user/Documents/demo.bin", ios::in | ios::binary);
+	ifstream iz("/home/user/Documents/data_v13.bin", ios::in | ios::binary);
 	ofstream v("/home/user/Documents/tyt.bin", ios::out | ios::binary);
 	iz.seekg(0, ios::end);
 	const int izsize = iz.tellg();
